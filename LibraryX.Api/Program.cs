@@ -78,6 +78,7 @@ app.MapDelete("/v1/category/{id}", (
 {
     var categoryId = new Guid(id);
     var category = context.Categories.Find(categoryId);
+    
     context.Categories.Remove(category);
     context.SaveChanges();
 

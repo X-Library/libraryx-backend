@@ -21,6 +21,9 @@ public class BookMapping : IEntityTypeConfiguration<BookModel>
         
         builder.Property(x => x.Description)
             .HasColumnType("NVARCHAR");
+        
+        builder.Property(x => x.Summary)
+            .HasColumnType("NVARCHAR");
 
         builder.Property(x => x.ISSN)
             .IsRequired()

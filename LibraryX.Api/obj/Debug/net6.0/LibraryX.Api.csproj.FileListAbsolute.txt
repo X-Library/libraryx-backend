@@ -118,3 +118,5 @@ C:\dev\libraryx-backend\LibraryX.Api\obj\Debug\net6.0\LibraryX.Api.dll
 C:\dev\libraryx-backend\LibraryX.Api\obj\Debug\net6.0\ref\LibraryX.Api.dll
 C:\dev\libraryx-backend\LibraryX.Api\obj\Debug\net6.0\LibraryX.Api.pdb
 C:\dev\libraryx-backend\LibraryX.Api\obj\Debug\net6.0\LibraryX.Api.genruntimeconfig.cache
+C:\Users\brewe\OneDrive\Hobby\libraryx-backend\LibraryX.Api\bin\Debug\net6.0\Humanizer.dll
+C:\Users\brewe\OneDrive\Hobby\libraryx-backend\LibraryX.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
