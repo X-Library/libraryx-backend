@@ -28,4 +28,4 @@ BEGIN TRANSACTION
             FOREIGN KEY ([CategoryId])
                 REFERENCES [Category]
     GO
-ROLLBACK
+ROLLBACKcd
