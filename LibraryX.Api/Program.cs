@@ -53,6 +53,15 @@ app.MapGet("/v1/category", (AppDbContext context) =>
     return Results.Ok(categories);
 });
 
+app.MapGet("/v1/category/{id}", (
+    AppDbContext context,
+    string id) =>
+{
+    var categoryId = new Guid(id);
+    var category = context.Categories.Find(categoryId);
+    return Results.Ok(category);
+});
+
 app.MapPost("/v1/category", (
     AppDbContext context,
     CategoryModel category) =>
