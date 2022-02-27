@@ -1,6 +1,12 @@
-﻿namespace LibraryX.Api.Controllers;
+﻿using LibraryX.Api.SharedContext.UseCases;
 
-public class BaseController
+namespace LibraryX.Api.Controllers;
+
+public abstract class BaseController : ControllerBase
 {
-    
+    public async Task<IActionResult> Handle(IRequest request)
+    {
+        await Task.Delay(1);
+        return Ok();
+    }
 }
