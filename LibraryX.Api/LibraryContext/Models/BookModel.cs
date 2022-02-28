@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace LibraryX.Api.LibraryContext.Models;
+﻿namespace LibraryX.Api.LibraryContext.Models;
 
 public class BookModel : Model
 {
