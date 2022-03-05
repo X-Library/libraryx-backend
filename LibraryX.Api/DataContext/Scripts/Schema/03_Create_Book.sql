@@ -8,7 +8,8 @@ BEGIN TRANSACTION
         [AuthorId]    [UNIQUEIDENTIFIER] NOT NULL,
         [CategoryId]  [UNIQUEIDENTIFIER] NOT NULL,
         [Title]       [NVARCHAR](80)     NOT NULL,
-        [Description] [NVARCHAR](MAX)    NOT NULL,
+        [Description] [NVARCHAR](160),
+        [Summary]     [NVARCHAR](MAX),
         [ISSN]        [VARCHAR](13)      NOT NULL
     )
 
@@ -28,4 +29,4 @@ BEGIN TRANSACTION
             FOREIGN KEY ([CategoryId])
                 REFERENCES [Category]
     GO
-ROLLBACK
+ROLLBACKcd

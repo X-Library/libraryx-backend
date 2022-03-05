@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brewe\\OneDrive\\Hobby\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj": {}
+    "C:\\dev\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brewe\\OneDrive\\Hobby\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj": {
+    "C:\\dev\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brewe\\OneDrive\\Hobby\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj",
+        "projectUniqueName": "C:\\dev\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj",
         "projectName": "LibraryX.Api",
-        "projectPath": "C:\\Users\\brewe\\OneDrive\\Hobby\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj",
-        "packagesPath": "C:\\Users\\brewe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brewe\\OneDrive\\Hobby\\libraryx-backend\\LibraryX.Api\\obj\\",
+        "projectPath": "C:\\dev\\libraryx-backend\\LibraryX.Api\\LibraryX.Api.csproj",
+        "packagesPath": "C:\\Users\\Cris\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\libraryx-backend\\LibraryX.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\brewe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +45,12 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.2, )"
             },
@@ -79,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
