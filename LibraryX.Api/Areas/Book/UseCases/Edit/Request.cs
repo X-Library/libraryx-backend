@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace LibraryX.Api.Areas.Book.UseCases.Edit;
+﻿namespace LibraryX.Api.Areas.Book.UseCases.Edit;
 
 public class Request : IRequest
 {
@@ -17,8 +15,7 @@ public class Request : IRequest
     [MaxLength(160, ErrorMessage = "'Descrição' pode conter um máximo de 160 caracteres.")]
     public string Description { get; set; } = string.Empty;
 
-    [Display(Name = "Resumo")]
-    public string Summary { get; set; } = string.Empty;
+    [Display(Name = "Resumo")] public string Summary { get; set; } = string.Empty;
 
     [Display(Name = "ISSN")]
     [Required(ErrorMessage = "'ISSN' é um campo obrigatório.")]

@@ -7,7 +7,10 @@ public class AppDbContext : DbContext
     public DbSet<BookModel> Books { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=libraryx-dev;User Id=sa;Password=1q2w3e4r@#$");
+    {
+        optionsBuilder.UseSqlServer("Server=127.0.0.1,1433;Database=libraryx-dev;User Id=sa;Password=1q2w3e4r@#$");
+        // Mudar a senha antes de commitar
+    }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -11,17 +11,17 @@ public class AuthorMapping : IEntityTypeConfiguration<AuthorModel>
             .IsRequired()
             .HasMaxLength(80)
             .HasColumnType("NVARCHAR");
-        
+
         builder.Property(x => x.LastName)
             .IsRequired()
             .HasMaxLength(80)
             .HasColumnType("NVARCHAR");
-        
+
         builder.Property(x => x.Nationality)
             .IsRequired()
             .HasMaxLength(80)
             .HasColumnType("VARCHAR");
-        
+
         builder.Property(x => x.Email)
             .IsRequired()
             .HasMaxLength(160)

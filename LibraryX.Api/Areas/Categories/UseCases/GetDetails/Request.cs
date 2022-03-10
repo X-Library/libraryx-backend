@@ -2,5 +2,5 @@
 
 public class Request : IRequest
 {
-    public Guid  Id { get; set; }
+    public Guid Id { get; set; }
 }

@@ -6,7 +6,7 @@ public class CategoryMapping : IEntityTypeConfiguration<CategoryModel>
     {
         builder.ToTable("Category");
         builder.HasKey(x => x.Id);
-        
+
         builder.Property(x => x.Title)
             .IsRequired()
             .HasMaxLength(80)

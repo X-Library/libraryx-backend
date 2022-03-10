@@ -1,6 +1,4 @@
-﻿using LibraryX.Api.SharedContext.UseCases;
-
-namespace LibraryX.Api.Controllers;
+﻿namespace LibraryX.Api.Controllers;
 
 public abstract class BaseController : ControllerBase
 {
