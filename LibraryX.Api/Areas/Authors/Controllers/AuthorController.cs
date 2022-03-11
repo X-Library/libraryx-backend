@@ -8,7 +8,7 @@ namespace LibraryX.Api.Areas.Authors.Controllers;
 
 public class AuthorController : BaseController
 {
-    [HttpGet("v1/authors")]
+    [HttpGet("v1/authors/")]
     public async Task<IActionResult> Get([FromQuery] GetAllRequest model)
     {
         return await Handle(model);
@@ -20,7 +20,7 @@ public class AuthorController : BaseController
         return await Handle(model);
     }
 
-    [HttpPost("v1/authors")]
+    [HttpPost("v1/authors/")]
     public async Task<IActionResult> Post([FromQuery] CreateRequest model)
     {
         return await Handle(model);

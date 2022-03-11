@@ -1,7 +1,6 @@
 ﻿namespace LibraryX.Api.Areas.Categories.UseCases.GetAll;
 
-public class Request : IRequest
+public class Request : Page
 {
-    public int Skip { get; set; } = 0;
-    public int Take { get; set; } = 25;
+    public Page Pages { get; set; }
 }
