@@ -1,4 +1,4 @@
-﻿namespace LibraryX.Api.Areas.Authors.UseCases.Delete;
+﻿namespace LibraryX.Api.Areas.Author.UseCases.Delete;
 
 public class Request : IRequest
 {

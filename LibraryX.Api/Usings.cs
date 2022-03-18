@@ -6,3 +6,5 @@ global using LibraryX.Api.SharedContext.UseCases;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using LibraryX.Api.Controllers;
+global using System.ComponentModel.DataAnnotations;

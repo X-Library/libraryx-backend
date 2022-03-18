@@ -1,4 +1,3 @@
-using LibraryX.Api.Controllers;
 using CreateRequest = LibraryX.Api.Areas.Book.UseCases.Create.Request;
 using DeleteRequest = LibraryX.Api.Areas.Book.UseCases.Delete.Request;
 using EditRequest = LibraryX.Api.Areas.Book.UseCases.Edit.Request;
@@ -7,20 +6,22 @@ using GetAllRequest = LibraryX.Api.Areas.Book.UseCases.GetAll.Request;
 
 namespace LibraryX.Api.Areas.Book.Controllers;
 
+[ApiController]
+[Route("v1/books")]
 public class BookController : BaseController
 {
-    [HttpGet("v1/books")]
+    [HttpGet]
     public async Task<IActionResult> Get([FromQuery] GetAllRequest model) => await Handle(model);
     
-    [HttpGet("v1/books/{id}")]
+    [HttpGet("{id}")]
     public async Task<IActionResult> Get([FromRoute] GetDetailsRequest model) => await Handle(model);
     
-    [HttpPost("v1/books")]
+    [HttpPost]
     public async Task<IActionResult> Post([FromQuery] CreateRequest model) => await Handle(model);
     
-    [HttpPut("v1/books/{id}")]
+    [HttpPut("{id}")]
     public async Task<IActionResult> Put([FromRoute] EditRequest model) => await Handle(model);
     
-    [HttpDelete("v1/books/{id}")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete([FromRoute] DeleteRequest model) => await Handle(model);
 } 

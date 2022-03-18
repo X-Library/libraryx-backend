@@ -1,4 +1,4 @@
-﻿namespace LibraryX.Api.Areas.Authors.UseCases.GetDetails;
+﻿namespace LibraryX.Api.Areas.Author.UseCases.GetDetails;
 
 public class Request : IRequest
 {

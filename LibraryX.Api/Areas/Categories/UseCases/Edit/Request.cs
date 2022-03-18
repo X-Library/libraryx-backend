@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace LibraryX.Api.Areas.Categories.UseCases.Edit;
+﻿namespace LibraryX.Api.Areas.Categories.UseCases.Edit;
 
 public class Request : IRequest
 {

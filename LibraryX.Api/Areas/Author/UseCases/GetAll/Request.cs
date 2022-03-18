@@ -1,4 +1,4 @@
-﻿namespace LibraryX.Api.Areas.Categories.UseCases.GetAll;
+﻿namespace LibraryX.Api.Areas.Author.UseCases.GetAll;
 
 public class Request : Pages
 {
