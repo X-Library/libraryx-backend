@@ -29,7 +29,7 @@ public class Email : ValueObject
     #endregion
 
     #region methods
-    public void ConfirmEmail(string code)
+    public void ConfirmEmail(string code = "")
     {
         if(string.IsNullOrEmpty(code))
             throw new ArgumentNullException("Verification code can not be null or empty;");
