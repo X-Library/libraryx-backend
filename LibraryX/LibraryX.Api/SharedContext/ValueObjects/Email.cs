@@ -16,13 +16,6 @@ public class Email : ValueObject
 
         Address = emailAddress;
         Confirmed = false;
-
-        /*
-        VerificationCode = Guid.NewGuid()
-            .ToString()
-            .ToUpper()
-            [..8];
-            */
     }
 
     #endregion

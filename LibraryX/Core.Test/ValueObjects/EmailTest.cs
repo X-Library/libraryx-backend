@@ -14,7 +14,7 @@ public class EmailTest
         Email email = new("mail@mail.com");
         var code = email.VerificationCode;
         email.ConfirmEmail(code);
-        
+
         Assert.IsTrue(email.Confirmed);
     }
 
