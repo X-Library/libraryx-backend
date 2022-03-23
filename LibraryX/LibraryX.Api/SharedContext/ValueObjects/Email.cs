@@ -5,6 +5,7 @@ namespace LibraryX.Api.SharedContext.ValueObjects;
 public class Email : ValueObject
 {
     #region constructors
+
     public Email(string emailAddress)
     {
         if (string.IsNullOrEmpty(emailAddress))
@@ -12,37 +13,44 @@ public class Email : ValueObject
 
         if (emailAddress.Length > 160)
             throw new InvalidEmailLengthException();
-        
+
         Address = emailAddress;
         Confirmed = false;
+
+        /*
         VerificationCode = Guid.NewGuid()
             .ToString()
             .ToUpper()
             [..8];
+            */
     }
+
     #endregion
 
     #region properties
+
     public string Address { get; }
     public bool Confirmed { get; private set; }
-    public string VerificationCode { get; }
+    public VerificationCode VerificationCode { get; }
+
+    // Aqui
+
     #endregion
 
     #region methods
-    public void ConfirmEmail(string code = "")
+
+    public void ConfirmEmail(VerificationCode code)
     {
-        if(string.IsNullOrEmpty(code))
-            throw new ArgumentNullException("Verification code can not be null or empty;");
-
-        if (code != VerificationCode)
-            throw new InvalidVerificationCodeException();
-
-        Confirmed = true;
+        if (code.IsValid)
+            Confirmed = true;
     }
+
     #endregion
 
     #region overloads
+
     public static implicit operator string(Email email) => email.Address;
     public static implicit operator Email(string address) => new(address);
+
     #endregion
 }

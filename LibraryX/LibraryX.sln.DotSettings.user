@@ -1,16 +1,16 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=40939a86_002D7373_002D43e7_002Da0c4_002D9426eb84b548/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GivenAValidVerificationCodeEmailShouldBeConfirmed" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::BD2A22F5-5866-44F6-9C1F-1056B75595BF::net6.0::Core.Test.ValueObjects.EmailTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=40939a86_002D7373_002D43e7_002Da0c4_002D9426eb84b548/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GivenAValidVerificationCodeEmailShouldBeConfirmed" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::BD2A22F5-5866-44F6-9C1F-1056B75595BF::net6.0::Core.Test.ValueObjects.EmailTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9480c3b7_002D93d7_002D46d8_002Da793_002Def678367351a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EmailTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::BD2A22F5-5866-44F6-9C1F-1056B75595BF::net6.0::Core.Test.ValueObjects.EmailTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9480c3b7_002D93d7_002D46d8_002Da793_002Def678367351a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EmailTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::BD2A22F5-5866-44F6-9C1F-1056B75595BF::net6.0::Core.Test.ValueObjects.EmailTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9cb8f1e2_002D5b51_002D417a_002Da1e7_002D9c79c46c52a3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EmailTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::BD2A22F5-5866-44F6-9C1F-1056B75595BF::net6.0::Core.Test.ValueObjects.EmailTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9cb8f1e2_002D5b51_002D417a_002Da1e7_002D9c79c46c52a3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EmailTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::BD2A22F5-5866-44F6-9C1F-1056B75595BF::net6.0::Core.Test.ValueObjects.EmailTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
