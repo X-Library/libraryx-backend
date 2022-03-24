@@ -11,7 +11,7 @@ public class VerificationCode : ValueObject
         if (string.IsNullOrEmpty(verificationCode))
             throw new ArgumentException("The validation code can not be null or empty");
 
-        if (verificationCode != Code[..8].ToUpper())
+        if (verificationCode != Code)
             throw new InvalidVerificationCodeException();
 
         if (verificationCode.Length != 8)
@@ -19,27 +19,25 @@ public class VerificationCode : ValueObject
 
         Code = verificationCode;
         HasValue = true;
-        IsValid = false;
+        Verified = ConfirmVerificationCode(verificationCode);
     }
 
     # endregion
 
     # region properties
 
-    public string Code { get; private set; }
-    public DateTime ExpirationDate { get; set; } = DateTime.UtcNow.AddMinutes(2);
-    public bool HasValue { get; set; }
-    public bool IsValid { get; set; }
+    public string Code { get; } = Guid.NewGuid().ToString().ToUpper()[..8];
+    public DateTime ExpirationDate { get; } = DateTime.UtcNow.AddMinutes(2);
+    public bool HasValue { get; }
+    public bool Verified { get; }
 
     # endregion
 
     # region methods
 
-    public void ConfirmVerificationCode(string verificationCode)
-    {
-        if (verificationCode == Code[..8].ToUpper() && DateTime.UtcNow <= ExpirationDate)
-            IsValid = true;
-    }
+    private bool  ConfirmVerificationCode(string verificationCode) => 
+        verificationCode == Code && DateTime.UtcNow <= ExpirationDate;
+    
 
     # endregion
 

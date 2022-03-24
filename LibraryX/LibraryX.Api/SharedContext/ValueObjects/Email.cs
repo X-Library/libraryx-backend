@@ -34,7 +34,7 @@ public class Email : ValueObject
 
     public void ConfirmEmail(VerificationCode code)
     {
-        if (code.IsValid)
+        if (code.Verified)
             Confirmed = true;
     }
 
