@@ -23,11 +23,9 @@ public class Email : ValueObject
     #region properties
 
     public string Address { get; }
-    public bool Confirmed { get; private set; }
-    public VerificationCode VerificationCode { get; }
-
-    // Aqui
-
+    public bool Confirmed { get; private set; } 
+    public VerificationCode VerificationCode { get; init; } = new();
+    
     #endregion
 
     #region methods

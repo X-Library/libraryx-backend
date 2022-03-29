@@ -6,45 +6,53 @@ public class VerificationCode : ValueObject
 {
     # region constructors
 
-    public VerificationCode(string verificationCode)
+
+    public VerificationCode()
     {
-        if (string.IsNullOrEmpty(verificationCode))
-            throw new ArgumentException("The validation code can not be null or empty");
+        if (string.IsNullOrEmpty(Code))
+            throw new ArgumentNullException("The verification code can not be null or empty");
 
-        if (verificationCode != Code)
+        if (Code.Length != 8)
             throw new InvalidVerificationCodeException();
 
-        if (verificationCode.Length != 8)
-            throw new InvalidVerificationCodeException();
-
-        Code = verificationCode;
-        HasValue = true;
-        Verified = ConfirmVerificationCode(verificationCode);
+        HasValue = false;
+        Verified = false;
     }
-
+    
     # endregion
 
     # region properties
-
-    public string Code { get; } = Guid.NewGuid().ToString().ToUpper()[..8];
-    public DateTime ExpirationDate { get; } = DateTime.UtcNow.AddMinutes(2);
-    public bool HasValue { get; }
-    public bool Verified { get; }
+    
+    public string Code { get;  set; } = Guid.NewGuid().ToString()[..8].ToUpper();
+    public DateTime ExpirationDate { get; set; } = DateTime.UtcNow.Date.AddMinutes(2);
+    public bool HasValue { get; set; }
+    public bool Verified { get; set; } 
 
     # endregion
 
     # region methods
-
-    private bool  ConfirmVerificationCode(string verificationCode) => 
-        verificationCode == Code && DateTime.UtcNow <= ExpirationDate;
     
+    public void ConfirmVerificationCodeValidValueExpirationDate(VerificationCode verificationCode)
+    {
+        if (Code != verificationCode.Code) throw new InvalidVerificationCodeException();
+        verificationCode.HasValue = true;
+
+        if (DateTime.UtcNow.Date > ExpirationDate ) throw new ExceededDateTimeVerificationCodeException();
+        Verified = true;
+    }
+
 
     # endregion
 
     # region overloads
 
-    public static implicit operator string(VerificationCode verificationCode) => verificationCode.Code;
-    public static implicit operator VerificationCode(string code) => new(code);
+    public static implicit operator string?(VerificationCode verificationCode) => verificationCode.Code;
+
+    public static implicit operator VerificationCode(string verificationCodeString)
+    {
+        VerificationCode verificationCode = new(){Code = verificationCodeString};
+        return verificationCode;
+    }
     
     # endregion
 }
