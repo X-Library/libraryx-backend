@@ -26,7 +26,7 @@ public class VerificationCode : ValueObject
     public string Code { get;  set; } = Guid.NewGuid().ToString()[..8].ToUpper();
     public DateTime ExpirationDate { get; set; } = DateTime.UtcNow.Date.AddMinutes(2);
     public bool HasValue { get; set; }
-    public bool Verified { get; set; } 
+    public bool Verified { get; private set; } 
 
     # endregion
 
