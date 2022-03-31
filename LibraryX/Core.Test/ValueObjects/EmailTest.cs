@@ -34,6 +34,14 @@ public class EmailTest
         email.VerificationCode.ConfirmVerificationCodeValidValueExpirationDate(verificationCode);
         email.ConfirmEmail(email.VerificationCode);
     }
+    
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException))]
+    public void GivenAValidVerificationCodeShouldThrowArgumentNullException()
+    {
+        Email email = new("");
+        email.ConfirmEmail(email.VerificationCode);
+    }
 
     [TestMethod]
     [ExpectedException(typeof(ExceededDateTimeVerificationCodeException))]

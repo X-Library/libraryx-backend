@@ -24,7 +24,7 @@ public class Email : ValueObject
 
     public string Address { get; }
     public bool Confirmed { get; private set; } 
-    public VerificationCode VerificationCode { get; init; } = new();
+    public VerificationCode VerificationCode { get; set; } = new();
     
     #endregion
 
