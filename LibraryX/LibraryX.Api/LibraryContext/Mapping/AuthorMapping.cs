@@ -7,12 +7,12 @@ public class AuthorMapping : IEntityTypeConfiguration<AuthorModel>
         builder.ToTable("Author");
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Name)
+        builder.Property(x => x.Name.FirstName)
             .IsRequired()
             .HasMaxLength(80)
             .HasColumnType("NVARCHAR");
         
-        builder.Property(x => x.LastName)
+        builder.Property(x => x.Name.LastName)
             .IsRequired()
             .HasMaxLength(80)
             .HasColumnType("NVARCHAR");
