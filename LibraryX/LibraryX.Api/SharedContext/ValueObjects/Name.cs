@@ -1,23 +1,18 @@
-﻿namespace LibraryX.Api.SharedContext.ValueObjects;
+﻿using LibraryX.Api.SharedContext.Exceptions;
+
+namespace LibraryX.Api.SharedContext.ValueObjects;
 
 public class Name : ValueObject
 {
     #region constructors
-
-    public Name()
-    {
-    }
     
-    public Name(string firstName, string lastName)
+    public Name()
     {
         if (string.IsNullOrEmpty(FirstName) | string.IsNullOrEmpty(LastName)) 
             throw new ArgumentNullException("This field can not be null or empty;");
 
         if (FirstName.Length < 2 | LastName.Length < 2 | FirstName.Length > 80 | LastName.Length > 80)
-            throw new ArgumentNullException("This field must have between 2 and 80 characters");
-
-        FirstName = firstName;
-        LastName = lastName;
+            throw new InvalidNameLengthException();
     }
 
     #endregion
