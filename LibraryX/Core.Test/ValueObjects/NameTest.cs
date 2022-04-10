@@ -10,13 +10,18 @@ public class NameTest
     //Dado um nome vazio ou nullo o teste deve retornar ArgumentNullException
     [TestMethod]
     [ExpectedException(typeof(ArgumentNullException))]
-    public void GivenAnInvalidNameShouldThrowArgumentNullException()
+    public void GivenAnInvalidFirstNameShouldThrowArgumentNullException(Name name)
     {
-        var name = new Name
-        {
-            FirstName = "",
-            LastName = "Name"
-        };
+        name.FirstName = "";
+        name.LastName = "Sobrenome";
+    }
+    
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException))]
+    public void GivenAnInvalidLastNameShouldThrowArgumentNullException(Name name)
+    {
+        name.FirstName = "Nome";
+        name.LastName = "";
     }
 
 
