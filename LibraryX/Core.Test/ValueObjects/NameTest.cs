@@ -8,56 +8,58 @@ namespace Core.Test.ValueObjects;
 [TestClass]
 public class NameTest
 {
-    //Dado um nome vazio ou nullo o teste deve retornar ArgumentNullException
     [TestMethod]
     [ExpectedException(typeof(ArgumentNullException))]
-    public void GivenAnInvalidFirstNameShouldThrowArgumentNullException()
+    public void GivenAInvalidFirstNameShouldThrowArgumentNullException()
     {
-        Name name = new Name("" , "Sobrenome");
+        var name = new Name("" , "Sobrenome");
     }
     
     [TestMethod]
     [ExpectedException(typeof(ArgumentNullException))]
-    public void GivenAnInvalidLastNameShouldThrowArgumentNullException()
+    public void GivenAInvalidLastNameShouldThrowArgumentNullException()
     {
-        Name name = new Name("Nome", "");
-    }
-    
-    //Dado um nome contendo um número de caracteres menor do que 2 O teste deve retornar InvalidNameLengthException
-    [TestMethod]
-    [ExpectedException(typeof(InvalidNameLengthException))]
-    public void GivenAnFirstNameContainingANumberOfCharactersLessThan2TheTestShouldReturnInvalidNameLengthException()
-    {
-        Name name = new Name("N", "SobreNome");
+        var name = new Name("Nome", "");
     }
     
     [TestMethod]
     [ExpectedException(typeof(InvalidNameLengthException))]
-    public void GivenAnLastNameContainingANumberOfCharactersLessThan2TheTestShouldReturnInvalidNameLengthException()
+    public void GivenAFirstNameWithANumberOfCharactersLessThanTwoShouldThrowInvalidNameLengthException()
     {
-        Name name = new Name("Nome", "S");
-    }
-    
-    //Dado um nome contendo um número de caracteres maior do que 80 O teste deve retornar InvalidNameLengthException
-    [TestMethod]
-    [ExpectedException(typeof(InvalidNameLengthException))]
-    public void GivenAnFirstNameContainingANumberOfCharactersGreaterThan80TestShouldReturnInvalidNameLengthException()
-    {
-        Name name = new Name("NomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomes", "SobreNome");
+        var name = new Name("N", "SobreNome");
     }
     
     [TestMethod]
     [ExpectedException(typeof(InvalidNameLengthException))]
-    public void GivenAnLastNameContainingANumberOfCharactersGreaterThan80TestShouldReturnInvalidNameLengthException()
-    {
-        Name name = new Name("Nome", "SobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomes");
+    public void GivenALastNameWithANumberOfCharactersLessThanTwoShouldThrowInvalidNameLengthException()
+    { 
+        var name = new Name("Nome", "S");
     }
     
-    //Dado um nome válido o teste deve retornar o nome
     [TestMethod]
-    public void GivenAValidNameTheTestShouldReturnTheName()
+    [ExpectedException(typeof(InvalidNameLengthException))]
+    public void GivenAFirstNameWithANumberOfCharactersGreaterThanEightyShouldThrowInvalidNameLengthException()
     {
-        Name name = new Name("Nome", "SobreNome");
-        Assert.IsTrue(name == new Name("Nome", "Sobrenome"));
+        var name = new Name("NomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomesNomes", "SobreNome");
+    }
+    
+    [TestMethod]
+    [ExpectedException(typeof(InvalidNameLengthException))]
+    public void GivenALastNameWithANumberOfCharactersGreaterThanEightyShouldReturnInvalidNameLengthException()
+    {
+        var name = new Name("Nome", "SobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomesSobreNomes");
+    }
+    
+    [TestMethod]
+    public void GiveAValidNameTestShouldReturnTrueTheName()
+    {
+        var name = new Name("Nome", "SobreNome");
+        if (2 >= name.FirstName.Length
+            && 2 >= name.FirstName.Length
+            && name.LastName.Length <= 80
+            && name.LastName.Length <= 80)
+        {
+            Assert.IsTrue(true);
+        }
     }
 }

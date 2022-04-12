@@ -13,13 +13,13 @@ public class Name : ValueObject
         if (string.IsNullOrEmpty(name.FirstName) | string.IsNullOrEmpty(name.LastName)) 
             throw new ArgumentNullException("This field can not be null or empty;");
 
-        if (name.FirstName.Length < 2 | name.LastName.Length < 2)
+        if (name.FirstName.Length <= 2 | name.LastName.Length <= 2)
             throw new InvalidNameLengthException("This field must have more than 2 characters");
 
-        if (name.FirstName.Length > 80 | name.LastName.Length > 80)
+        if (name.FirstName.Length >= 80 | name.LastName.Length >= 80)
             throw new InvalidNameLengthException("This field must have less than 80 characters");
 
-        FirstName = name.FirstName;
+        FirstName = name.FirstName; 
         LastName = name.LastName;
     }
 
@@ -28,10 +28,10 @@ public class Name : ValueObject
         if (string.IsNullOrEmpty(firstName) | string.IsNullOrEmpty(lastName))
             throw new ArgumentNullException("This field can not be null or empty;");
         
-        if (firstName.Length < 2 | lastName.Length < 2)
+        if (firstName.Length <= 2 | lastName.Length <= 2)
             throw new InvalidNameLengthException("This field must have more than 2 characters");
 
-        if (firstName.Length > 80 | lastName.Length > 80)
+        if (firstName.Length >= 80 | lastName.Length >= 80)
             throw new InvalidNameLengthException("This field must have less than 80 characters");
         FirstName = firstName;
         LastName = lastName;
